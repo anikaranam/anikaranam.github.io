@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --section-spacing: 2rem;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background-color: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.contact-info {
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+section {
+    background-color: white;
+    margin: var(--section-spacing) 0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.experience-item {
+    margin-bottom: 1.5rem;
+}
+
+.experience-title {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-company {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.experience-date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.experience-details {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+.experience-details li {
+    margin-bottom: 0.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item {
+    background-color: #e9ecef;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.education-item {
+    margin-bottom: 1rem;
+}
+
+.coursework-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.coursework-item {
+    background-color: #e9ecef;
+    padding: 0.8rem;
+    border-radius: 6px;
+}
