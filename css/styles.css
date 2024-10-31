@@ -6,17 +6,21 @@
     --section-spacing: 2rem;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -25,6 +29,7 @@ header {
     background-color: white;
     padding: 2rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .header-content {
@@ -33,88 +38,160 @@ header {
 
 h1 {
     color: var(--primary-color);
-    margin: 0;
+    margin-bottom: 1rem;
     font-size: 2.5rem;
 }
 
 .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
     color: var(--secondary-color);
-    margin-top: 1rem;
 }
 
 section {
     background-color: white;
-    margin: var(--section-spacing) 0;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--section-spacing);
 }
 
 h2 {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
-    margin-top: 0;
-}
-
-.experience-item {
     margin-bottom: 1.5rem;
 }
 
-.experience-title {
-    font-weight: bold;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
+.experience-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
 }
 
-.experience-company {
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.experience-header h3 {
     color: var(--primary-color);
-    font-weight: 500;
+    margin-bottom: 0.25rem;
 }
 
-.experience-date {
+.role {
     color: var(--secondary-color);
     font-size: 0.9rem;
 }
 
-.experience-details {
-    margin-top: 0.5rem;
-    padding-left: 1.2rem;
+.date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
 }
 
-.experience-details li {
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
     margin-bottom: 0.5rem;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.article-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.article-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    list-style: none;
-    padding: 0;
 }
 
-.skill-item {
-    background-color: #e9ecef;
+.skill-tag {
+    background-color: #e3f2fd;
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
+    transition: background-color 0.2s;
 }
 
-.education-item {
-    margin-bottom: 1rem;
+.skill-tag:hover {
+    background-color: #bbdefb;
 }
 
-.coursework-list {
+.course-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
-    list-style: none;
-    padding: 0;
 }
 
-.coursework-item {
-    background-color: #e9ecef;
-    padding: 0.8rem;
+.course-item {
+    background-color: #e3f2fd;
+    padding: 1rem;
     border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.course-item:hover {
+    background-color: #bbdefb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
 }
